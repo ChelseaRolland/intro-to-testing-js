@@ -18,3 +18,13 @@ const isFive = function (input) {
 }
 
 //isEven function
+const isEven = function (input) {
+    if (parseFloat(input % 2 === 0)) {
+        return true;
+    } else if(!isNaN(input)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}

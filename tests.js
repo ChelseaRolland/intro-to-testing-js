@@ -66,6 +66,49 @@ describe('isFive', function () {
     it('should return a boolean when called', function () {
         expect(isFive()).toBe(typeof input === "boolean")
     });
+    it('should return a boolean - TRUE when called', function () {
+        expect(isFive(5)).toBe(true)
+    });
+    it('should return a boolean - TRUE when called', function () {
+        expect(isFive("5")).toBe(true)
+    });
 })
 
 //Unit test for isEven function
+describe('isEven', function () {
+    it('should be defined as a function', function () {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should return a boolean when called', function () {
+        expect(isEven()).toBe(typeof input === "boolean")
+    });
+    it('should return a boolean - TRUE when called - 2', function () {
+        expect(isEven(2)).toBe(true)
+    });
+    it('should return a boolean - TRUE when called - -4', function () {
+        expect(isEven(-4)).toBe(true)
+    });
+    it('should return a boolean - FALSE when called - 3', function () {
+        expect(isEven(3)).toBe(false)
+    });
+    it('should return a boolean - FALSE when called - banana', function () {
+        expect(isEven("banana")).toBe(false)
+    });
+    it('should return a boolean - TRUE when called - "8"', function () {
+        expect(isEven("8")).toBe(true)
+    });
+    it('should return a boolean - FALSE when called - Infinity', function () {
+        expect(isEven(Infinity)).toBe(false)
+    });
+    it('should return a boolean - FALSE when called - true', function () {
+        expect(isEven(true)).toBe(false)
+    });
+    it('should return a boolean - FALSE when called - false', function () {
+        expect(isEven(false)).toBe(false)
+    });
+    it('should return a boolean - FALSE when called', function () {
+        expect(isEven()).toBe(false)
+    });
+
+
+})
