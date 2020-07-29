@@ -25,3 +25,24 @@ const isEven = function (input) {
         return false;
     }
 }
+
+//isVowel function --> Ask for help with shortening this tomorrow
+const isVowel = function (input) {
+    // var toString = input.toString();
+    // var noCase = input.toLowerCase();
+    if (typeof input !== "string") {
+        return false;
+    } else if ((typeof input === "string") && (input === 'a' || input === "A" || input === 'e' || input === "E" || input === 'i' || input === "I" || input === 'o' || input === "O" || input === 'u' || input === "U")) {
+        return true;
+    } else {
+        return false;
+    }
+}
+    // var vowel = input.toLowerCase;
+    // if ((typeof input === "string") && (vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u"))  {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+
+
