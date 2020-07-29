@@ -11,3 +11,10 @@ const sayHello = function (input) {
         return "Hello, " + input + "!";
     }
 }
+
+//isFive function
+const isFive = function (input) {
+    return (parseFloat(input) === 5);
+}
+
+//isEven function
