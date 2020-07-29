@@ -64,7 +64,7 @@ describe('isFive', function () {
         expect(typeof isFive).toBe('function');
     });
     it('should return a boolean when called', function () {
-        expect(isFive()).toBe(typeof input === "boolean");
+        expect(typeof isFive()).toBe('boolean');
     });
     it('should return a boolean - TRUE when called', function () {
         expect(isFive(5)).toBe(true);
@@ -80,7 +80,7 @@ describe('isEven', function () {
         expect(typeof isEven).toBe('function');
     });
     it('should return a boolean when called', function () {
-        expect(isEven()).toBe(typeof input === "boolean");
+        expect(typeof isEven()).toBe('boolean');
     });
     it('should return a boolean - TRUE when called - 2', function () {
         expect(isEven(2)).toBe(true);
@@ -116,7 +116,7 @@ describe('isVowel', function () {
         expect(typeof isVowel).toBe('function');
     });
     it('should return a boolean when called', function () {
-        expect(isVowel()).toBe(typeof input === "boolean");
+        expect(typeof isVowel()).toBe('boolean');
     });
     it('should return a boolean - TRUE when called - "a"', function () {
         expect(isVowel("a")).toBe(true);
@@ -141,5 +141,35 @@ describe('isVowel', function () {
     });
     it('should return a boolean - FALSE when called', function () {
         expect(isVowel()).toBe(false);
+    });
+})
+
+describe('add', function () {
+    it('should define a function', function () {
+        expect(typeof add).toBe('function')
+    });
+    it('should return a number when called', function () {
+        expect(typeof add()).toBe('number');
+    });
+    it('should return a number when called - 5', function () {
+        expect(add(2, 3)).toBe(5);
+    });
+    it('should return a number when called - -12', function () {
+        expect(add(-3, -9)).toBe(-12);
+    });
+    it('should return a number when called - 11', function () {
+        expect(add("5", 6)).toBe(11);
+    });
+    it('should return a number when called - 6', function () {
+        expect(add("-4", "10")).toBe(6);
+    });
+    it('should return a number when called - 2 strings = NaN', function () {
+        expect(add("banana", "split")).toBe(NaN);
+    });
+    it('should return a number when called - number + string = NaN', function () {
+        expect(add(2, "apples")).toBe(NaN);
+    });
+    it('should return a number when called - empty argument = NaN', function () {
+        expect(add()).toBe(NaN);
     });
 })

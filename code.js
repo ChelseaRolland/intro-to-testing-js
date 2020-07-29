@@ -32,7 +32,8 @@ const isVowel = function (input) {
     // var noCase = input.toLowerCase();
     if (typeof input !== "string") {
         return false;
-    } else if ((typeof input === "string") && (input === 'a' || input === "A" || input === 'e' || input === "E" || input === 'i' || input === "I" || input === 'o' || input === "O" || input === 'u' || input === "U")) {
+    } else if ((typeof input === "string") && (input.toLowerCase() === "a" || input.toLowerCase() === "e" || input.toLowerCase() === "i" || input.toLowerCase() === "o" || input.toLowerCase() === "u")) {
+    //else if ((typeof input === "string") && (input === 'a' || input === "A" || input === 'e' || input === "E" || input === 'i' || input === "I" || input === 'o' || input === "O" || input === 'u' || input === "U")) {
         return true;
     } else {
         return false;
@@ -45,4 +46,15 @@ const isVowel = function (input) {
     //     return false;
     // }
 
-
+//add function
+const add = function (x, y) {
+    if (typeof (parseFloat(x)) === 'number' && typeof (parseFloat(y)) === 'number') {
+        return parseFloat(x) + parseFloat(y);
+    } //((((parseFloat(x) && (!isNaN(x)))) && ((parseFloat(y)) && (!isNaN(y))))) {
+    else if ((isNaN(x)) && (isNaN(y))) {
+        return NaN;
+    }
+    else {
+        return NaN;
+    }
+}
