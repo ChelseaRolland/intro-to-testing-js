@@ -164,12 +164,12 @@ describe('add', function () {
         expect(add("-4", "10")).toBe(6);
     });
     it('should return a number when called - 2 strings = NaN', function () {
-        expect(add("banana", "split")).toBe(NaN);
+        expect(isNaN(add("banana", "split"))).toBe(true);
     });
     it('should return a number when called - number + string = NaN', function () {
-        expect(add(2, "apples")).toBe(NaN);
+        expect(isNaN(add(2, "apples"))).toBe(true);
     });
     it('should return a number when called - empty argument = NaN', function () {
-        expect(add()).toBe(NaN);
+        expect(isNaN(add())).toBe(true);
     });
 })
